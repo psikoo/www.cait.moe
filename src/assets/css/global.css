@@ -1,0 +1,67 @@
+:root {
+  --color-primary: #aa8cd7;
+  --color-background: #1e1e2d;
+  --color-background-light: #322d41;
+  --color-text: #cdd6f5;
+  --color-gradient: #eb8ccb;
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-primary);
+  background-clip: unset; 
+  -webkit-background-clip: unset; 
+  -webkit-text-fill-color:  var(--color-background); 
+}
+
+@font-face {
+  font-family: atkinson;
+  font-display: block;
+  src: url(../fonts/atkinson.ttf)
+}
+
+html {
+  overscroll-behavior: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-background-light) !important;
+}
+@media screen and (max-width: 450px) {
+  html {
+    scrollbar-color: var(--color-primary) var(--color-background) !important;
+  }
+}
+
+h1 {
+  font-size: x-large;
+}
+
+small {
+  font-size: small;
+  opacity: 60%;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+a:hover {
+  text-decoration: underline;
+  filter: brightness(0.75);
+}
+a:active {
+  font-size: 120%;
+  line-height: 1rem;
+}
+
+ul {
+  margin-left: 2rem;
+}
+
+ul > li:before {
+  content: url("../svg/arrow.svg");
+  height: 1rem;
+  width: 1rem;
+  filter: brightness(0) saturate(100%) invert(74%) sepia(76%) saturate(2152%) hue-rotate(206deg) brightness(89%) contrast(89%);
+  float: left;
+  margin-left: -20px
+}
